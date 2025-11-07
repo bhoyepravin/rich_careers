@@ -7,6 +7,7 @@ import {
   HiSearch,
   HiSparkles,
 } from "react-icons/hi";
+import { logo } from "../../assets";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,7 +85,7 @@ const Navbar = () => {
             className="flex items-center gap-3 group cursor-pointer"
           >
             <motion.div
-              className={`relative w-12 h-12 rounded-2xl ${
+              className={`relative w-15 h-15 rounded-2xl ${
                 scrolled
                   ? "bg-gradient-to-br from-catalina-blue to-denim shadow-lg"
                   : "bg-white/10 backdrop-blur-sm border border-white/20"
@@ -103,13 +104,13 @@ const Navbar = () => {
                   repeatType: "reverse",
                 }}
               />
-              <span
-                className={`font-bold text-lg relative z-10 ${
-                  scrolled ? "text-white" : "text-white"
-                }`}
-              >
-                CT
-              </span>
+
+              {/* Logo Image */}
+              <img
+                src={logo} // Update this path to your actual logo file
+                alt="Catalina Innovations Logo"
+                className="w-8 h-8 object-contain relative z-10"
+              />
 
               {/* Sparkle effect */}
               <motion.div
@@ -130,9 +131,7 @@ const Navbar = () => {
                 className={`text-2xl font-black tracking-tight ${
                   scrolled ? "text-catalina-blue" : "text-white"
                 }`}
-              >
-                Catalina
-              </span>
+              ></span>
               <motion.span
                 className={`text-sm font-medium ${
                   scrolled ? "text-cerulean" : "text-denim"
@@ -140,9 +139,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
-              >
-                INNOVATIONS
-              </motion.span>
+              ></motion.span>
             </div>
           </motion.div>
 
@@ -269,7 +266,7 @@ const Navbar = () => {
                   : "text-white hover:bg-white/20 hover:shadow-lg"
               }`}
             >
-              <HiSearch className="text-xl" />
+              {/* <HiSearch className="text-xl" /> */}
             </motion.button>
 
             <motion.button

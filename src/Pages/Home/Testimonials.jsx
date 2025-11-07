@@ -84,7 +84,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-[#6ebfeb]">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
